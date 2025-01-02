@@ -3,17 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <h1>Weather App</h1>
-        <input type="text" id="city" placeholder="Enter city name" />
-        <button onclick="fetchData()">Get Weather</button>
-        <div id="weatherContainer"></div>
-      </section>
-      <script src="index.js"></script>
-    </main>
+    <div class="weather-container">
+      <header class="header">
+        <h1>Jakarta</h1>
+        <p>Monday 29 Apr 18:33</p>
+      </header>
+      <div class="current-weather">
+        <div class="temperature">
+          <h2>32&deg;C</h2>
+          <p>Scattered Clouds</p>
+        </div>
+
+        <div class="details">
+          <p><span>💧</span> 62%</p>
+          <p><span>💨</span> 2.57 km/h</p>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search city here" />
+        <button onclick="fetchData()">🔍</button>
+      </div>
+      <div class="forecast">
+        <div class="day">
+          <p>Mon</p>
+          <img src="" alt="weather" />
+          <p>33&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Tue</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Wed</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Thu</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Fri</p>
+          <img src="" alt="weather" />
+          <p>33&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Sat</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

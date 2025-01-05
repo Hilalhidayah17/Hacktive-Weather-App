@@ -14,7 +14,41 @@ async function fetchData() {
     document.getElementById(
       "current-temperature"
     ).innerText = `${data.current.temperature_2m}°C`;
-    console.log(data.current.temperature_2m);
+
+    // Daily forecast
+    const forecast = document.getElementsByClassName("forecast");
+    data.daily.forEach((e) => {
+      forecast += `<div class="day">
+          <p>Mon</p>
+          <img src="" alt="weather" />
+          <p>33&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Tue</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Wed</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Thu</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Fri</p>
+          <img src="" alt="weather" />
+          <p>33&deg; / 27&deg;</p>
+        </div>
+        <div class="day">
+          <p>Sat</p>
+          <img src="" alt="weather" />
+          <p>32&deg; / 27&deg;</p>
+        </div>`;
+    });
   } catch (error) {
     console.error(error);
   }

@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-Arial bg-[#f9f9f9] m-0 p-0 color-[#333]">
+  <body class="font-Arial bg-[#f9f9f9] m-0 p-0 color-[#333] bg-white/40">
     <div
-      class="w-[90%] mx-[auto] my-[20px] bg-[#fff] rounded-[15px] p-[20px] shadow-xl m-w-[800px]"
+      class="w-[90%] mx-[auto] my-[20px] bg-[#fff] rounded-[15px] p-[20px] shadow-xl m-w-[800px] backdrop-blur-sm bg-black/30"
     >
-      <header class="header text-center">
+      <header class="text-center">
         <h1 id="city" class="m-0 text-[2rem]">Jakarta</h1>
         <p id="current-time" class="mx-[5px] my-0 color-[#888]">
           Monday 29 Apr 18:33
@@ -27,7 +26,7 @@
 
         <div class="details text-right text-[0.9rem] color-[#888]">
           <p><span>💧</span> 62%</p>
-          <p><span>💨</span> 2.57 km/h</p>
+          <p id="wind-speed"><span>💨</span> 2.57 km/h</p>
         </div>
       </div>
       <div class="search flex justify-between items-center my-[20px]">
@@ -44,32 +43,10 @@
           🔍
         </button>
       </div>
-      <div id="forecast" class="flex justify-between items-center mt-[20px]">
-        <div class="day text-center text-[0.9rem] color-[#333]">
-          <p>${day}</p>
-          <img
-            src="${code[weatherCode][currentInfo].image}"
-            alt="weather"
-            class="max-w-40px h-auto my-10px mx-0"
-          />
-          <p class="my">${maxTemp}°C</p>
-        </div>
-        <div class="day">
-          <p>${day}</p>
-          <img src="${code[weatherCode][currentInfo].image}" alt="weather" />
-          <p class="my-[5px] mx-0">${maxTemp}°C</p>
-        </div>
-        <div class="day">
-          <p>${day}</p>
-          <img src="${code[weatherCode][currentInfo].image}" alt="weather" />
-          <p>${maxTemp}°C</p>
-        </div>
-        <div class="day">
-          <p>${day}</p>
-          <img src="${code[weatherCode][currentInfo].image}" alt="weather" />
-          <p>${maxTemp}°C</p>
-        </div>
-      </div>
+      <div
+        id="forecast"
+        class="grid grid-cols-7 gap-1.5 items-center justify-items-center"
+      ></div>
     </div>
     <script src="weather-code.js"></script>
     <script src="index.js"></script>

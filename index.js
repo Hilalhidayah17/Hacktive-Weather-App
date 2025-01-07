@@ -7,7 +7,7 @@ async function fetchData() {
     const dataLocation = await responseLocation.json();
 
     const response = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${dataLocation.results[0].latitude}&longitude=${dataLocation.results[0].longitude}&current=temperature_2m,relative_humidity_2m,is_day,precipitation,rain,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,precipitation_sum,rain_sum,wind_speed_10m_max`
+      `https://api.open-meteo.com/v1/forecast?latitude=${dataLocation.results[0].latitude}&longitude=${dataLocation.results[0].longitude}&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,precipitation,rain,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,wind_speed_10m_max`
     );
     const data = await response.json();
     console.log(data);
@@ -54,6 +54,10 @@ async function fetchData() {
       "current-temperature"
     ).innerText = `${data.current.temperature_2m}°C`;
 
+    document.getElementById(
+      "wind-speed"
+    ).innerText = `💨${data.current.wind_speed_10m} km/h`;
+
     const currentInfo = data.current.is_day === 0 ? "night" : "day";
 
     document.querySelector("#current-icon").src =
@@ -61,15 +65,22 @@ async function fetchData() {
 
     // Daily forecast
     let forecast = document.getElementById("forecast");
+    forecast.innerHTML = "";
     data.daily.time.forEach((e, index) => {
       const dateForecast = new Date(e);
       const day = days[dateForecast.getDay()];
       const weatherCode = data.daily.weather_code[index];
 
       const maxTemp = data.daily.temperature_2m_max[index];
-      forecast.innerHTML += `<div class="day">
+      forecast.innerHTML += `<div
+          class="flex flex-col items-center justify-center text-center text-[0.9rem] text-[#333] bg-[#f5f5f5] p-2 rounded-lg w-[100px]"
+        >
           <p>${day}</p>
-          <img src=${code[weatherCode][currentInfo].image} alt="weather" />
+          <img
+            src="${code[weatherCode][currentInfo].image}"
+            alt="weather"
+            class="w-10 h-10 my-2"
+          />
           <p>${maxTemp}°C</p>
         </div>
       `;

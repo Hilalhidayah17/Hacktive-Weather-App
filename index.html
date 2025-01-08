@@ -6,48 +6,66 @@
     <title>Weather Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="font-Arial bg-[#f9f9f9] m-0 p-0 color-[#333] bg-white/40">
+  <body
+    class="font-sans bg-[#86A788] min-h-screen text-white flex items-center justify-center"
+  >
     <div
-      class="w-[90%] mx-[auto] my-[20px] bg-[#fff] rounded-[15px] p-[20px] shadow-xl m-w-[800px] backdrop-blur-sm bg-black/30"
+      class="w-[90%] mx-auto my-5 bg-white/10 rounded-2xl p-6 shadow-2xl max-w-[800px] backdrop-blur-lg border-white/20"
+      id="main-container"
     >
+      <!-- Header Section -->
       <header class="text-center">
-        <h1 id="city" class="m-0 text-[2rem]">Jakarta</h1>
-        <p id="current-time" class="mx-[5px] my-0 color-[#888]">
-          Monday 29 Apr 18:33
-        </p>
+        <h1 id="city" class="text-4xl font-bold">Input Your City Below</h1>
+        <p id="current-time" class="mt-2 text-mdv text-white/80"></p>
       </header>
-      <div class="current-weather flex justify-between items-center my-[20px]">
-        <div class="temperature">
-          <h2 id="current-temperature" class="text-[3rem] m-0 color-[#333]">
-            32<span>&deg;C</span>
-          </h2>
-          <img src="" alt="weather-code" id="current-icon" />
-        </div>
 
-        <div class="details text-right text-[0.9rem] color-[#888]">
-          <p><span>💧</span> 62%</p>
-          <p id="wind-speed"><span>💨</span> 2.57 km/h</p>
+      <!-- Current Weather Section -->
+      <div
+        class="current-weather flex flex-col sm:flex-row justify-between items-center mt-6 gap-4"
+      >
+        <div
+          class="temperature flex flex-row justify-center items-center gap-4 hidden"
+          id="temperature"
+        >
+          <h2 id="current-temperature" class="text-4xl font-extrabold"></h2>
+          <img
+            src=""
+            alt="weather-icon"
+            id="current-icon"
+            class="w-20 h-20 mx-auto sm:m-0"
+          />
+        </div>
+        <div class="details text-sm text-right" id="params">
+          <p
+            id="wind-speed"
+            class="flex items-center gap-1 mx-auto sm:m-0 text-3xl"
+          ></p>
         </div>
       </div>
-      <div class="search flex justify-between items-center my-[20px]">
+
+      <!-- Search Section -->
+      <div class="search flex justify-between items-center mt-8">
         <input
           type="text"
           placeholder="Search city here"
           id="search-location"
-          class="flex-1 p-[10px] rounded-full border-[1px] border-[#ddd] text-[1rem]"
+          class="flex-1 p-3 rounded-full border border-gray-300 text-gray-800 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         <button
           onclick="fetchData()"
-          class="bg-none border-none text-[1.2rem] cursor-pointer"
+          class="ml-3 p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-pink-500 text-white text-xl shadow-lg focus:outline-none"
         >
           🔍
         </button>
       </div>
+
+      <!-- Forecast Section -->
       <div
         id="forecast"
-        class="grid grid-cols-7 gap-1.5 items-center justify-items-center"
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 mt-8 text-center place-items-center"
       ></div>
     </div>
+
     <script src="weather-code.js"></script>
     <script src="index.js"></script>
   </body>

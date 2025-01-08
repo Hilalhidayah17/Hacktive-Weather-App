@@ -42,6 +42,9 @@ async function fetchData() {
     const monthName = months[date.getMonth()];
     const year = date.getFullYear();
 
+    document.getElementById("temperature").style.display = `block`;
+    document.getElementById("params").style.display = `block`;
+
     document.getElementById(
       "city"
     ).innerText = `${dataLocation.results[0].name}`;
@@ -72,8 +75,12 @@ async function fetchData() {
       const weatherCode = data.daily.weather_code[index];
 
       const maxTemp = data.daily.temperature_2m_max[index];
+      document.getElementById(
+        "main-container"
+      ).style.background = `url(${code[weatherCode][currentInfo].atmosphere}) no-repeat center/cover`;
       forecast.innerHTML += `<div
-          class="flex flex-col items-center justify-center text-center text-[0.9rem] text-[#333] bg-[#f5f5f5] p-2 rounded-lg w-[100px]"
+          class="flex flex-col items-center justify-center text-center text-[0.9rem] text-[#333] bg-white/10
+backdrop-blur-lg p-2 rounded-lg w-[100px]"
         >
           <p>${day}</p>
           <img
@@ -84,6 +91,7 @@ async function fetchData() {
           <p>${maxTemp}°C</p>
         </div>
       `;
+      console.log(code[weatherCode][currentInfo].atmosphere);
     });
   } catch (error) {
     console.error(error);

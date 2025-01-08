@@ -3,6 +3,8 @@ const code = {
     day: {
       description: "Sunny",
       image: "http://openweathermap.org/img/wn/01d@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/45c219049529ab39da83e059aaec8d81/c48ac63851e20bba-2b/s640x960/d34a10787ecb05e59dd9272e817539c2ab90ef79.gifv",
     },
     night: {
       description: "Clear",
@@ -13,6 +15,8 @@ const code = {
     day: {
       description: "Mainly Sunny",
       image: "http://openweathermap.org/img/wn/01d@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/45c219049529ab39da83e059aaec8d81/c48ac63851e20bba-2b/s640x960/d34a10787ecb05e59dd9272e817539c2ab90ef79.gifv",
     },
     night: {
       description: "Mainly Clear",
@@ -23,20 +27,28 @@ const code = {
     day: {
       description: "Partly Cloudy",
       image: "http://openweathermap.org/img/wn/02d@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/a2ce1e258b3fbf940614f373a709436c/d544d70696384cb9-56/s640x960/a503d05b0d672cffa6d991e9408809f683412e52.gif",
     },
     night: {
       description: "Partly Cloudy",
       image: "http://openweathermap.org/img/wn/02n@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/a2ce1e258b3fbf940614f373a709436c/d544d70696384cb9-56/s640x960/a503d05b0d672cffa6d991e9408809f683412e52.gif",
     },
   },
   3: {
     day: {
       description: "Cloudy",
       image: "http://openweathermap.org/img/wn/03d@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/a2ce1e258b3fbf940614f373a709436c/d544d70696384cb9-56/s640x960/a503d05b0d672cffa6d991e9408809f683412e52.gif",
     },
     night: {
       description: "Cloudy",
       image: "http://openweathermap.org/img/wn/03n@2x.png",
+      atmosphere:
+        "https://64.media.tumblr.com/a2ce1e258b3fbf940614f373a709436c/d544d70696384cb9-56/s640x960/a503d05b0d672cffa6d991e9408809f683412e52.gif",
     },
   },
   45: {
@@ -63,60 +75,84 @@ const code = {
     day: {
       description: "Light Drizzle",
       image: "http://openweathermap.org/img/wn/09d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Light Drizzle",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   53: {
     day: {
       description: "Drizzle",
       image: "http://openweathermap.org/img/wn/09d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Drizzle",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   55: {
     day: {
       description: "Heavy Drizzle",
       image: "http://openweathermap.org/img/wn/09d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Heavy Drizzle",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   56: {
     day: {
       description: "Light Freezing Drizzle",
       image: "http://openweathermap.org/img/wn/09d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Light Freezing Drizzle",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   57: {
     day: {
       description: "Freezing Drizzle",
       image: "http://openweathermap.org/img/wn/09d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Freezing Drizzle",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   61: {
     day: {
       description: "Light Rain",
       image: "http://openweathermap.org/img/wn/10d@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
     night: {
       description: "Light Rain",
       image: "http://openweathermap.org/img/wn/10n@2x.png",
+      atmosphere:
+        "https://66.media.tumblr.com/54f8f2ac56a71691c4d6e5c7fe290e68/tumblr_oau6zftR5n1rj05e4o1_500.gif",
     },
   },
   63: {
@@ -163,40 +199,56 @@ const code = {
     day: {
       description: "Light Snow",
       image: "http://openweathermap.org/img/wn/13d@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
     night: {
       description: "Light Snow",
       image: "http://openweathermap.org/img/wn/13n@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
   },
   73: {
     day: {
       description: "Snow",
       image: "http://openweathermap.org/img/wn/13d@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
     night: {
       description: "Snow",
       image: "http://openweathermap.org/img/wn/13n@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
   },
   75: {
     day: {
       description: "Heavy Snow",
       image: "http://openweathermap.org/img/wn/13d@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
     night: {
       description: "Heavy Snow",
       image: "http://openweathermap.org/img/wn/13n@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
   },
   77: {
     day: {
       description: "Snow Grains",
       image: "http://openweathermap.org/img/wn/13d@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
     night: {
       description: "Snow Grains",
       image: "http://openweathermap.org/img/wn/13n@2x.png",
+      atmosphere:
+        "https://68.media.tumblr.com/10012d52c86f7ca76476c52c080409bc/tumblr_nxwzu3zglC1rh2n3qo1_500.gif",
     },
   },
   80: {
@@ -207,6 +259,8 @@ const code = {
     night: {
       description: "Light Showers",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://dynamicpowerpoint.com/wp-content/uploads/2022/02/thunder-full-hd-weather-icon-sample.gif",
     },
   },
   81: {
@@ -217,6 +271,8 @@ const code = {
     night: {
       description: "Showers",
       image: "http://openweathermap.org/img/wn/09n@2x.png",
+      atmosphere:
+        "https://dynamicpowerpoint.com/wp-content/uploads/2022/02/thunder-full-hd-weather-icon-sample.gif",
     },
   },
   82: {
@@ -253,10 +309,14 @@ const code = {
     day: {
       description: "Thunderstorm",
       image: "http://openweathermap.org/img/wn/11d@2x.png",
+      atmosphere:
+        "https://dynamicpowerpoint.com/wp-content/uploads/2022/02/thunder-full-hd-weather-icon-sample.gif",
     },
     night: {
       description: "Thunderstorm",
       image: "http://openweathermap.org/img/wn/11n@2x.png",
+      atmosphere:
+        "https://dynamicpowerpoint.com/wp-content/uploads/2022/02/thunder-full-hd-weather-icon-sample.gif",
     },
   },
   96: {

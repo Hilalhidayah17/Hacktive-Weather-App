@@ -66,6 +66,10 @@ async function fetchData() {
     document.querySelector("#current-icon").src =
       code[data.current.weather_code][currentInfo].image;
 
+    document.getElementById("main-container").style.background = `url(${
+      code[data.current.weather_code][currentInfo].atmosphere
+    }) no-repeat center/cover`;
+
     // Daily forecast
     let forecast = document.getElementById("forecast");
     forecast.innerHTML = "";
@@ -75,12 +79,10 @@ async function fetchData() {
       const weatherCode = data.daily.weather_code[index];
 
       const maxTemp = data.daily.temperature_2m_max[index];
-      document.getElementById(
-        "main-container"
-      ).style.background = `url(${code[weatherCode][currentInfo].atmosphere}) no-repeat center/cover`;
+
       forecast.innerHTML += `<div
           class="flex flex-col items-center justify-center text-center text-[0.9rem] text-[#333] bg-white/10
-backdrop-blur-lg p-2 rounded-lg w-[100px]"
+backdrop-blur-lg p-2 rounded-lg w-[100px] mix-blend-difference "
         >
           <p>${day}</p>
           <img
@@ -91,7 +93,6 @@ backdrop-blur-lg p-2 rounded-lg w-[100px]"
           <p>${maxTemp}°C</p>
         </div>
       `;
-      console.log(code[weatherCode][currentInfo].atmosphere);
     });
   } catch (error) {
     console.error(error);

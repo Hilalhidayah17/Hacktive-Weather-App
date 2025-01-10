@@ -10,7 +10,7 @@ async function fetchData() {
       `https://api.open-meteo.com/v1/forecast?latitude=${dataLocation.results[0].latitude}&longitude=${dataLocation.results[0].longitude}&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,precipitation,rain,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,rain_sum,wind_speed_10m_max`
     );
     const data = await response.json();
-    console.log(data);
+
     // current temperature
     const days = [
       "Sunday",
@@ -106,3 +106,10 @@ backdrop-blur-lg p-2 rounded-lg w-[100px] mix-blend-difference "
     console.error(error);
   }
 }
+
+// fitur untuk apabila keyboard ditekan langsung memanggil hasil
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    fetchData();
+  }
+});

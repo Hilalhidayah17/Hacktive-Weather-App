@@ -90,15 +90,15 @@ async function fetchData() {
 
       forecast.innerHTML += `<div
           class="flex flex-col items-center justify-center text-center text-[0.9rem] text-[#333] bg-white/10
-backdrop-blur-lg p-2 rounded-lg w-[100px] mix-blend-difference "
+backdrop-blur-lg p-2 rounded-lg w-[100px] text-[#FF9D23] "
         >
-          <p class="text-white">${day}</p>
+          <p class="text-[#FF9D23]">${day}</p>
           <img
             src="${code[weatherCode][currentInfo].image}"
             alt="weather"
             class="w-10 h-10 my-2"
           />
-          <p class="text-white">${maxTemp}°C</p>
+          <p class="text-[#FF9D23]">${maxTemp}°C</p>
         </div>
       `;
     });
